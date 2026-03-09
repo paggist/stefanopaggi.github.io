@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Projects</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="no-sidebar is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header_home">
+
+			<!-- Inner -->
+			<div class="inner">
+				<header>
+					<h1><a href="#" id="logo">Projects</a></h1>
+				</header>
+			</div>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="home.html">About Me</a></li>
+					<li><a href="research.html">Many Body Physics</a></li>
+					<li><a href="#">Projects</a></li>
+					<li><a href="art.html">Art</a></li>
+					<li><a href="resume.html">Resume</a></li>
+				</ul>
+			</nav>
+
+		</div>
+
+		<!-- Main -->
+		<div class="wrapper style1">
+
+			<div class="container">
+				<div class="row gtr-200">
+					<div class="col-2 col-12-mobile" id="content">
+
+					</div>
+					<div class="col-3 col-12-mobile" id="content">
+						<p><a href="#machiavelli">Machiavelli Statistics</a></p>
+					</div>
+					<div class="col-5 col-12-mobile" id="content">
+
+
+						<article id="main" class="special">
+
+							<h3 style="line-height: 2.5em"><a id="machiavelli" href="#">Machiavelli Statistics</a></h3>
+							<figure class="image featured">
+								<img src="images/layout3.png" alt="" />
+								<figcaption>
+									<center>
+										Layout of a typical four player game of Machiavelli
+									</center>
+								</figcaption>
+							</figure>
+							<p>
+								This Python project uses a <a href="https://en.wikipedia.org/wiki/Convex_optimization"
+									target="_blank">convex optimization solver</a>
+								for the Italian card game <a
+									href="https://en.wikipedia.org/wiki/Machiavelli_(Italian_card_game)"
+									target="_blank">Machiavelli</a>
+								to perform statistical analysis on game outcomes based on strategies.
+
+								The codes are based on the <a href="https://github.com/cduck/machiavelli"
+									target="_blank">Machiavelli command-line game by Casey
+									Duckering</a>. Here, given starting hands, number of
+								decks, and number of players,
+								the game is then played between computers. The goal is to simulate e.g. a large amount
+								of games to gain data on how well certain starting hands, e.g. only spades in hand,
+								players
+								starting with different numbers of cards, players hiding cards, etc... compete against
+								others.
+
+								It also produces the card distribution at each turn, showing how long a game on
+								average lasts, what is a normal amount of cards to expect on each turn, etc.
+
+							</p>
+
+<figure class="image featured">
+								<img src="images/machia_4player_stats.png" alt="" />
+								<figcaption>
+									<center>
+									</center>
+								</figcaption>
+							</figure>
+							
+							<p>
+								The plot above shows the card distribution on each round for a player in a 4-player game
+								with two 52 French cards decks.
+								Starting hand are 5 cards.
+								The distribution was created from 10k simulated games.
+								The red step-line shows the maximum attainable cards for that round. The first rounds,
+								players are mainly picking cards from
+								the deck, and the most likely cards to shed are three of a kinds. In the middle section
+								of the game, players are often just shedding
+								one card per 4 rounds.
+								The upper plot shows the absolute number of occurences, whereas the lower plot displays
+								the number normalized for each round.
+							</p>
+							<p>
+								From the picture above one can read that a 4-player game ends after 70-90 rounds. The
+								number of cards per hand peaks at 17 cards per hand, and
+								then declines linearly after the 40th round. Very few games reach the 100th round, from
+								where players usually just have 1 card per hand which they
+								cannot discard, so they keep taking a card, and shed it in the next 4 rounds.
+
+							</p>
+
+							<p>
+								I found out that a game of Machiavelli takes about the same number of turns no matter
+								the
+								number of players.
+								With turn I mean each time the action passes to another player.
+								Results include:
+							<ul>
+								<li>The worst hand in Machiavelli is half of the cards in the deck</li>
+								<li>The maximum number of players for a 2 French deck Machiavelli is 8. Beyond 8
+									players,
+									the chance of running out of cards is greater than 1%</li>
+								<li>
+									Players with equal cards have it harder to win
+								</li>
+								<li>...</li>
+							</ul>
+							</p>
+							<p>
+								<a href="https://github.com/paggist/MachiavelliStatistics/tree/main" target="_blank"><i>[github link]</i></a>
+							</p>
+							<p></p>
+							<p></p>
+						</article>
+
+					</div>
+					<hr />
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-12">
+
+						<!-- Contact -->
+						<section class="contact">
+							<header>
+								<h2>Contact</h2>
+							</header>
+
+							<ul class="icons">
+
+
+								<li><a href="mailto:stefanopaggi@ymail.com" class="fa fa-envelope"></a></li>
+
+								<li><a href="https://github.com/paggist" target="_blank"
+										class="icon brands fa-github"><span class="label">Github</span></a></li>
+								<li><a href="https://www.linkedin.com/in/spaggi" class="icon brands fa-linkedin-in"
+										target="_blank"><span class="label">Linkedin</span></a>
+								</li>
+							</ul>
+						</section>
+
+						<!-- Copyright -->
+						<div class="copyright">
+							<ul class="menu">
+								<li>&copy; Stefano Paggi. All rights reserved.</li>
+								<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

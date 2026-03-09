@@ -1,0 +1,417 @@
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>MBP</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="no-sidebar is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header_research">
+
+			<!-- Inner -->
+			<div class="inner">
+				<header>
+					<h1><a href="#" id="logo">Many Body Physics</a></h1>
+				</header>
+			</div>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="home.html">About Me</a></li>
+					<li><a href="#">Many Body Physics</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="art.html">Art</a></li>
+					<li><a href="resume.html">Resume</a></li>
+				</ul>
+			</nav>
+
+		</div>
+
+		<!-- Main -->
+		<div class="wrapper style1">
+
+			<div class="container">
+				<div class="row gtr-200">
+					<div class="col-2 col-12-mobile" id="content">
+
+					</div>
+					<div class="col-3 col-12-mobile" id="content">
+						<ul style="list-style-type: none;">
+							<li><a href="#mcde">MCDE</a>
+								<ul style="list-style-type: none;">
+									<li><a href="#mcde_intro">Green's functions and Dyson Equation</a></li>
+									<li><a href="#mcde_dft_gw">DFT and <i>GW</i></a></li>
+									<li><a href="#mcde_impact">My impact</a></li>
+									<li><a href="#mcde_pub">Publications</a></li>
+								</ul>
+
+							</li>
+
+							<li><a href="#cebas">Cer clathrate</a></li>
+							<li><a href="#abse">Atomic Beam spectroscopy</a></li>
+						</ul>
+
+
+					</div>
+					<div class="col-5 col-12-mobile" id="content">
+
+
+						<article id="main" class="special">
+							<p><b>Spectroscopy</b> - the material-specific signature when light interacts with it - is a
+								crucial tool for many tasks,
+								such as identifying unknown substances, detecting pollution, designing solar cells or
+								microchips,
+								medical diagnosis and more. Predicting a material's spectrum is one of theoretical
+								<b><i>many body physics</i></b> biggest tasks.
+							</p>
+							<figure class="image featured">
+								<img src="images/ne_many_bases_paper_2.jpg" alt="s" />
+								<figcaption>
+									<center>A spectrum of Neon for different basis sets calculated within the MCDE.
+									</center>
+								</figcaption>
+							</figure>
+
+
+
+							<h3 style="line-height: 2.5em"><a id="mcde" href="#">Multichannel Dyson Equation</a></h3>
+
+							<p>During my PhD, I work on developing a computational method that looks
+								at how molecules and atoms change in interaction with light. I do this in
+								the research group of <a href="https://lpt.univ-tlse3.fr/en/fiche-annuaire/3556/"
+									target="_blank">Pina Romaniello</a> and <a
+									href="https://www.lcpq.ups-tlse.fr/berger/#latest" target="_blank">Arjan Berger</a>.
+
+							</p>
+							<p>More specifically, I implement a method called the <b>multichannel Dyson equation
+									(MCDE)</b>. This is a mathematical technique used to calculate the <b>excitation
+									spectrum</b>
+								of a system. That means the different energies at which a molecule or atom can absorb or
+								release energy. These excitations are important for understanding phenomena such as
+								electrical or heat conduction,
+								reflexitivity, and more.
+							</p>
+							<h4 id="mcde_intro">The Green's functions and Dyson equation</h4>
+							<p>
+								The MCDE method is mainly based on two ideas from theoretical physics: <b>Green's
+									functions</b>
+								and the <b>Dyson equation</b>.
+							</p>
+							<p>A molecule can be described mathematically by a <b>Hamiltonian</b>. This is
+								essentially a large equation that includes all the interactions in the system, such as
+								the forces between electrons and the forces between electrons and atomic nuclei. The
+								more interactions we include, the more complicated this equation becomes, and solving it
+								directly can be extremely difficult.
+							</p>
+							<p>Instead of solving the Hamiltonian directly, physicists often use Green’s functions.
+								These are mathematical tools that describe how particles move and respond
+								to disturbances (such as subjecting the molecule to x-ray) in a system. Green’s
+								functions contain the same physical information as
+								the Hamiltonian, but they are often easier to work with, especially when we use linear
+								algebra and complex numbers.
+							</p>
+							<p>The Dyson equation is a way to improve this description. It accounts for the fact that an
+								electron moving through a molecule can repeatedly interact with its surroundings.
+								For example by scattering off other electrons or the atomic potential. Mathematically,
+								this
+								process can be written as an infinite series that sums over repeated scattering events.
+								Fortunately, this series has a known solution, which makes the calculation easy.
+							</p>
+							<p>The MCDE method goes one step further by using <b>many-particle Green’s functions</b>,
+								which
+								describe several electrons interacting with each other at the same time. These functions
+								are connected through the Dyson equation, allowing us to model complex processes where
+								multiple electrons influence one another. This provides a more intuitive and physically
+								realistic way to describe many-electron effects, which are usually very difficult to
+								capture in calculations.
+							</p>
+							<h4 id="mcde_dft_gw">The other methods on the market: DFT and <i>GW</i></h4>
+							<p>Many common computational approaches use <b>density functional theory (DFT)</b>. While
+								DFT
+								is widely used, it relies on empirical parameters which are partly adjusted to
+								match experiments .This introduces a lot of room for uncertainties, as one does not
+								known
+								exactly the <i>why</i> to a good parameter. Another common method is <i><b>GW</b></i>
+								(the name, not an abbreviation).
+								It is free
+								of these empirical parameters, but is computationally
+								demanding because it requires evaluating a very large number of complex integrals.
+							</p>
+							<p>The MCDE approach provides an alternative. It avoids many of these difficult
+								integrations, by replacing
+								them with simple sums of so-called self energies,
+								and follows a single, consistent mathematical framework that does not rely on empirical
+								parameters. In practice, the problem becomes one of <b>large-scale linear algebra</b>,
+								where we determine the system's properties by solving a matrix diagonalization problem,
+								or matrix multiplication problem.
+							</p>
+							<h4 id="mcde_impact">My impact</h4>
+							<p>I wrote a Python program that performs the MCDE calculation for up to three-particle
+								interactions. The
+								code begins with <b>Hartree–Fock orbitals</b> generated by a quantum chemistry package
+								such as <a href="https://pyscf.org/" target="_blank"><b>PySCF</b></a> for example.
+								From this starting point, it can compute <b>photoelectron spectra</b>.
+								These graphics show when light of a certain energy gets absorbed by an e.g. molecule.
+								Because of the energy conservation, the energy gets used in the molecule to excite an
+								electron
+								so much that it can leave the molecule althogether. The absorbed energy
+								leaves a big peak in the spectrum.
+								When an electron leaves the molecule, the other electrons feel its absence, even to the
+								extent
+								that some might gain some energy, and be in an excited state.
+								These small peaks are called satellites, and come after, so higher in energy than, the
+								big peak.
+
+							</p>
+							<p>
+								It is also possible to add an electron to a molecule. The energies above zero on the
+								energy scale reflect this process,
+								whereas the ones below zero are the electron removal processes.
+								My program captures all of these processes, which can include up to a addition/removal
+								of an electron,
+								and excitation of two other. It yields all the peaks, and treats them all with the same
+								accuracy,
+								and computational cost, unlike the typical implementations of DFT and <i>GW</i>, which
+								usually only focus on the
+								big peaks close
+								to the zero energy.
+							</p>
+							<p>To carry out this work, I used several scientific and programming tools, including
+
+							<ul>
+								<li>Python (SciPy, NumPy, PySCF...)</li>
+								<li>Wolfram Mathematica (a high-level analytical computation all-purpose software
+									similar to Matlab)</li>
+								<li>FORTRAN</li>
+								<li>high-performance computing systems on Linux</li>
+							</ul>
+							The mathematics involved draws on
+							<ul>
+								<li>Linear Algebra (exact diagonalization, matrix multiplication methods such as Lanczos
+									algorithm)</li>
+								<li>Functional Analysis (Green's functions)</li>
+								<li>Numerical methods</li>
+							</ul>
+							</p>
+							<h4 id="mcde_pub">Publications</h4>
+							<p>
+
+								The work is covered in different publications in top scientific journals.
+							<ol>
+								<li><a href="https://pubs.aip.org/aip/jcp/article-abstract/163/15/154109/3368333/Ground-and-excited-state-properties-of-the?redirectedFrom=fulltext"
+										target="_blank"><i>Ground and excited-state properties of the extended Hubbard
+											dimer from the multichannel Dyson equation.</i> S. Paggi, J.A. Berger, P.
+										Romaniello. Journal of Chemical Physics, 163, 154109 (2025).</a></li>
+								<li><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.111.195133"
+										target="_blank"><i>Multichannel Dyson equations for even- and odd-order Green's
+											functions: Application to double excitations.</i> G. Riva, T. Fischer, S.
+										Paggi, J.A. Berger, P. Romaniello. Physics Review B 111, 195133 (2025).</a></li>
+								<li><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.216401"
+										target="_blank"><i>Multichannel Dyson Equation: Coupling Many-Body Green’s
+											Functions.</i> G. Riva, P. Romaniello, J.A. Berger. Physics Review B 111,
+										195133 (2025).</a></li>
+
+							</ol>
+							The code of the project will be on GitHub soon.
+
+							</p>
+
+
+							<p></p>
+							<p></p>
+						</article>
+						<article id="main" class="special">
+
+							<h3 style="line-height: 2.5em"><a id="cebas" href="#">Cer clathrate</a></h3>
+							<figure class="image featured">
+								<img src="images/xas_comps_with_exp.jpg" alt="s" />
+								<figcaption>
+									<center>Changing the number of bath states smoothens the spectrum.
+									</center>
+								</figcaption>
+							</figure>
+							<p>
+								During my
+								master
+								studies at the
+								renowned
+								University of
+								Heidelberg (3rd in
+								QS university
+								ranking for
+								Germany, and 65th
+								worldwide, 5th for
+								physics in
+								Germany) I
+								specialized in the
+								field of condensed
+								matter theory, and
+								worked closely
+								with the research
+								group led by <a target="_blank"
+									href="https://www.thphys.uni-heidelberg.de/~haverkort/">Prof. Maurits W.
+									Haverkort</a> on
+								ligand field
+								theory, exact
+								diagonalization
+								approaches in
+								understanding
+								many-body,<br>
+								electron
+								correlation
+								physics in heavy
+								fermion materials.
+								Together with the
+								Vienna based
+								research group of
+								<a target="_blank" href="https://www.ifp.tuwien.ac.at/paschen/">Prof. Silke
+									Bühler-Paschen</a>,
+								and under the
+								guidance of my
+								supervisor, I
+								successfully built
+								a single impurity
+								Anderson model
+								predicting the
+								asymmetric line
+								shape of <i>f-f</i>&nbsp;
+								transitions in a
+								cerium clathrate -
+								a feat with a
+								publication in
+								preparation.
+
+
+							</p>
+
+
+
+
+							
+							<figure class="image featured">
+								<img src="images/rattlingboosted.png" alt="s" />
+								<figcaption>
+									<center>Increasing the temperature induces the Ce to move inside the clathrate,
+										changing the
+										shape of the spectrum.
+									</center>
+								</figcaption>
+							</figure>
+							<p></p>
+							<p></p>
+						</article>
+						<article id="main" class="special">
+
+							<h3 style="line-height: 2.5em"><a id="abse" href="#">Atomic Beam Spectroscopy</a></h3>
+							<figure class="image featured">
+								<img src="images/wavscat.png" alt="s" />
+								<figcaption>
+									<center>The colorful wavelet scattering diagrams in the right of some geometric figures left.
+									</center>
+								</figcaption>
+							</figure>
+							<p>
+								In my bachelor thesis in the experimental group of <a href="https://www.physik.uni-heidelberg.de/personen/1662" target="_blank">Maarten DeKieviet</a> I simulated in Wolfram Mathematica the trajectories of Helium-3 beam particles, whose path goes through a quadrupole, an
+								aperture, and a
+								sextupole.
+								
+								Furthermore I calculated differential cross sections for the elastic scattering of
+								He beam particles on a
+								primitive, square 2D-lattice.
+								Last but not least I looked into the theory of wavelet scattering, where time of flight resolution
+								of spinecho curves with
+								emerges as a promising application of wavelet scattering for
+								future evaluation of 3He
+								atomic beam spinecho data.
+
+
+
+							</p>
+
+
+
+
+
+
+							
+
+							<p></p>
+							<p></p>
+						</article>
+					</div>
+					<hr />
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-12">
+
+						<!-- Contact -->
+						<section class="contact">
+							<header>
+								<h2>Contact</h2>
+							</header>
+
+							<ul class="icons">
+
+
+								<li><a href="mailto:stefanopaggi@ymail.com" class="fa fa-envelope"></a></li>
+
+								<li><a href="https://github.com/paggist" target="_blank"
+										class="icon brands fa-github"><span class="label">Github</span></a></li>
+								<li><a href="https://www.linkedin.com/in/spaggi" class="icon brands fa-linkedin-in"
+										target="_blank"><span class="label">Linkedin</span></a>
+								</li>
+							</ul>
+						</section>
+
+						<!-- Copyright -->
+						<div class="copyright">
+							<ul class="menu">
+								<li>&copy; Stefano Paggi. All rights reserved.</li>
+								<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
