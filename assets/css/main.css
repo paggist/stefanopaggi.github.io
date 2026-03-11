@@ -2670,8 +2670,16 @@ input, select, textarea {
 	#sidebar_center {
 	    padding: 0;
 	    padding-top: 72px;
+	   
 	}
-
+	
+	@media only screen and (max-width: 600px) {
+	    #sidebar_center {
+		
+		padding: 40px 0 0 40px;
+	    }
+	
+	}
 	#sidebar_center > hr {
 		top: 3em;
 		margin-bottom: 6em;
@@ -2684,6 +2692,7 @@ input, select, textarea {
 	#sidebar_center > section {
 		margin-bottom: 0;
 	}
+
 	
 	
 /* Main */
